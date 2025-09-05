@@ -1,0 +1,8 @@
+{
+  "models": [
+    { "id": "bai-3.5", "name": "BAI-3.5" },
+    { "id": "Bai-4", "name": "BAI-4" },
+    { "id": "bai-4.5", "name": "BAI-4.5" }
+  ]
+}
+

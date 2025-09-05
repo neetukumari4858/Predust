@@ -1,0 +1,8 @@
+{
+  "templates": [
+    { "id": 1, "name": "Summarize Text", "prompt": "Summarize the following text:" },
+    { "id": 2, "name": "Translate (French)", "prompt": "Translate this text to French:" },
+    { "id": 3, "name": "Explain Simply", "prompt": "Explain the topic in simple terms:" },
+    { "id": 4, "name": "Blog Outline", "prompt": "Create a blog outline about:" }
+  ]
+}
