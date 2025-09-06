@@ -19,7 +19,7 @@ export async function sendPrompt({ prompt, model, parameters }) {
       temperature > 0.85 ? 'creative' :
         'balanced'
   const base = [
-    `Model: ${model || 'gpt-3.5'} | Style: ${style} |`,
+    `Model: ${model || 'bai-3.5'} | Style: ${style} |`,
     `Prompt: ${prompt}`
   ].join('\n\n')
   // generate content length

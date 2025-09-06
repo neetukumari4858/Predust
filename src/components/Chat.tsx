@@ -71,7 +71,7 @@ export default function Chat({ messages, onCopy, onDownload }) {
                   }`}
                     onClick={() => onDownload(m)}
                   >
-                    Download
+                    Download JSON
                   </button>
                 </div>
               )}

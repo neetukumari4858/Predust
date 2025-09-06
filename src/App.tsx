@@ -40,15 +40,15 @@ export default function App() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const { dark } = useTheme();
-  const handleCopy = async (text) => {
+  const handleCopy = async (text) => { 
     try {
-      await navigator.clipboard.writeText(text);
+      await navigator.clipboard.writeText(text.answer);
       alert("Copied!");
     } catch {
       alert("Copy failed");
     }
   };
-  const handleDownload = (msg) => {
+  const handleDownload = (msg) => {    
     const payload = msg.meta || { response: msg.content };
     const blob = new Blob([JSON.stringify(payload, null, 2)], {
       type: "application/json",
@@ -78,7 +78,7 @@ export default function App() {
     try {
       const res = await sendPrompt({
         prompt: text,
-        model: model || "gpt-3.5",
+        model: model || "bai-3.5",
         parameters,
       });
       const aiMsg: Message = { role: "ai", content: res.parsed, meta: res };
@@ -145,8 +145,8 @@ export default function App() {
                           }}
                           className={`w-full sm:w-auto px-3 py-2 text-sm rounded-lg  transition focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                             dark
-                              ? 'bg-bg  hover"bg-[#121937]'
-                              : "border border-gray-300 hover:bg-gray-100 hover:bg-gray-800"
+                              ? 'bg-bg  hover"bg-bg'
+                              : "border border-gray-300 hover:bg-gray-100"
                           }`}
                         >
                           Use Template
